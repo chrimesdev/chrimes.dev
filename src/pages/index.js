@@ -15,6 +15,16 @@ export default function Home({ allPostsData }) {
         <p>Senior Developer at NHS Digital, working on the <a href="https://www.nhs.uk">NHS website</a> and <a href="https://service-manual.nhs.uk">NHS digital service manual</a>.</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>Pages</h2>
+        <ul className={utilStyles.list}>
+          <li className={utilStyles.listItem}>
+            <Link href="/github" as={`/github`}>
+              <a>NHS.UK frontend releases</a>
+            </Link>
+          </li>
+        </ul>
+      </section>
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
