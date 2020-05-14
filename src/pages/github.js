@@ -12,9 +12,9 @@ export default function GitHub({ releases }) {
       <section className={utilStyles.headingMd}>
         <h1>NHS.UK frontend releases</h1>
         <ul>
-        {releases.map(({ id, name, html_url, published_at }) => (
+        {releases.map(({ id, name, html_url, published_at, assets }) => (
           <li key={id}>
-            <a href={html_url}>{name}</a> released on <Date dateString={published_at} />
+            <a href={html_url}>{name}</a> released on <Date dateString={published_at} /> downloaded {assets[0].download_count} times
           </li>
         ))}
         </ul>
