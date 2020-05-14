@@ -21,6 +21,12 @@ a:hover {
   text-decoration: underline;
 }
 
+a:focus {
+  background-color: #000;
+  color: #fff;
+  outline: none; 
+}
+
 img {
   max-width: 100%;
   display: block;
