@@ -14,7 +14,7 @@ export default function GitHub({ releases }) {
         <ul>
         {releases.map(({ id, name, html_url, published_at, assets }) => (
           <li key={id}>
-            <a href={html_url}>{name}</a> released on <Date dateString={published_at} /> downloaded {assets[0].download_count} times
+            <a href={html_url}>{name}</a> released on <Date dateString={published_at} /> downloaded {assets[0].download_count} times (<a href={assets[0].browser_download_url}>Download release</a>)
           </li>
         ))}
         </ul>
