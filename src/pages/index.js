@@ -18,7 +18,7 @@ export default function Home({ allPostsData }) {
         <h2 className={utilStyles.headingLg}>Pages</h2>
         <ul className={utilStyles.list}>
           <li className={utilStyles.listItem}>
-            <Link href="/github" as={`/github`}>
+            <Link href="/releases" as={`/releases`}>
               <a>NHS.UK frontend releases</a>
             </Link>
           </li>

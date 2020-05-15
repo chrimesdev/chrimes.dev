@@ -1,16 +1,16 @@
 import Head from 'next/head';
-import Date from '../shared/date';
-import Layout, { siteTitle } from '../shared/layout';
-import downloadsData from '../lib/npm';
+import Date from '../../shared/date';
+import Layout, { siteTitle } from '../../shared/layout';
+import releaseData from '../../lib/github';
 
-export default function GitHub({ releases }) { 
+export default function Releases({ repo, releases }) { 
   return (
     <Layout>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <section>
-        <h1>NHS.UK frontend releases</h1>
+        <h1><a href={repo.html_url}>{repo.name}</a> releases</h1>
         <ul>
         {releases.map(({ id, name, html_url, published_at, assets, npmDownloads }) => (
           <li key={id}>
@@ -28,9 +28,19 @@ export default function GitHub({ releases }) {
 // direct database queries. See the "Technical details" section.
 export async function getStaticProps() {
   try {
-    const releases = await downloadsData();
+    // Change repo
+    // Format: org/repo-name
+    const repoURL = 'nhsuk/nhsuk-frontend';
+
+    // Fetch data from the GitHub API for repo
+    const res = await fetch(`https://api.github.com/repos/${repoURL}`);
+    const repo = await res.json();
+    // Get release data for repo `lib/github.js`
+    const releases = await releaseData(repoURL);
+
     return {
       props: {
+        repo,
         releases,
       },
     }
