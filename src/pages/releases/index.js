@@ -11,10 +11,10 @@ export default function Releases({ repo, releases }) {
         <title>{siteTitle}</title>
       </Head>
       <section>
-        <h1><a href={repo.html_url}>{repo.name}</a> releases</h1>
+        <h1><a href={repo.html_url}>{repo.name}</a> telemetry</h1>
 
         <table>
-          <caption>{repo.name} telemetry data</caption>
+          <caption>{repo.name} release data for GitHub and npm</caption>
           <tbody>
             <tr>
               <th scope="col">Version</th>

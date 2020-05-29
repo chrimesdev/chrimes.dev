@@ -19,7 +19,7 @@ export default function Home({ allPostsData }) {
         <ul className={utilStyles.list}>
           <li className={utilStyles.listItem}>
             <Link href="/releases" as={`/releases`}>
-              <a>NHS.UK frontend releases</a>
+              <a>NHS.UK frontend telemetry</a>
             </Link>
           </li>
         </ul>
