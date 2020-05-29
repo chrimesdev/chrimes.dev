@@ -31,3 +31,18 @@ img {
   max-width: 100%;
   display: block;
 }
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  text-align: center;
+}
+
+caption {
+  padding: 16px;
+  caption-side: bottom;
+}
