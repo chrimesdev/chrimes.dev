@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import styles from './layout.module.scss'
-import utilStyles from '../styles/utils.module.scss'
 import Link from 'next/link'
 
 const name = 'Adam Chrimes'
@@ -8,59 +6,46 @@ export const siteTitle = 'Adam Chrimes'
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Adam Chrimes website" />
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Adam Chrimes website"
-        />
-        <meta
-          property="og:image"
-          content={`https://og-image.now.sh/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <img
-              src="/images/profile.png"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <img
-                  src="/images/profile.png"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
-      </header>
-      <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
+
+      <section class="hero is-primary">
+        <div class="hero-body">
+          <div class="container">
+            <div class="columns">
+              <div class="column is-three-fifths">
+                <h1 class="title is-size-2">
+                  Adam Chrimes
+                </h1>
+                <p class="subtitle is-size-4">
+                Senior Developer at NHS Digital, working on the <a href="https://www.nhs.uk">NHS website</a> and <a href="https://service-manual.nhs.uk">NHS digital service manual</a>.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      )}
+      </section>
+
+      <div className="container">
+        <main className="wrapper">
+        
+          {children}
+
+          {!home && (
+            <div className="mt-4">
+              <Link href="/">
+                <a>← Back to home</a>
+              </Link>
+            </div>
+          )}
+        </main>
+      </div>
     </div>
   )
 }

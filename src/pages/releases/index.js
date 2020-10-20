@@ -11,17 +11,17 @@ export default function Releases({ repo, releases }) {
         <title>{siteTitle}</title>
       </Head>
       <section>
-        <h1><a href={repo.html_url}>{repo.name}</a> telemetry</h1>
-
-        <table>
-          <caption>{repo.name} release data for GitHub and npm</caption>
-          <tbody>
+        <h2 className="title">{repo.name} telemetry</h2>
+        <table className="table">
+          <thead>
             <tr>
               <th scope="col">Version</th>
               <th scope="col">Release date</th>
               <th scope="col">GitHub downloads</th>
               <th scope="col">npm installs</th>
             </tr>
+          </thead>
+          <tbody>
             {releases.map(({ id, name, html_url, published_at, assets, npmDownloads }) => (
             <tr key={id} class="table-content">
               <th scope="row"><a href={html_url}>{name}</a></th>
@@ -31,6 +31,7 @@ export default function Releases({ repo, releases }) {
             </tr>
             ))}
           </tbody>
+          <caption>{repo.name} release data for GitHub and npm</caption>
         </table>
       </section>
     </Layout>

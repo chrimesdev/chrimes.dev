@@ -1,47 +1,54 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  font-size: 18px;
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+// Set your brand colors
+$purple: #8A4D76;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $purple;
+$link: $purple;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+$body-background-color: #fff;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+@import "../../node_modules/bulma/bulma.sass";
+
+.wrapper {
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
-* {
-  box-sizing: border-box;
+.box {
+  border: 1px solid $purple;
 }
 
-a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-a:hover {
+.hero-body a {
   text-decoration: underline;
 }
 
-a:focus {
-  background-color: #000;
-  color: #fff;
-  outline: none; 
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-table {
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: collapse;
-}
-
-td {
-  text-align: center;
+a {
+  &:focus,
+  &:hover {
+    color: black !important;
+    text-decoration: underline;
+    outline: 0;
+  }
 }
 
 caption {
-  padding: 16px;
+  padding: 10px;
   caption-side: bottom;
 }
