@@ -11,18 +11,18 @@ export default function Home({ allPostsData }) {
       </Head>
 
       <section>
-        <div class="columns">
-          <div class="column is-one-half">
-            <div class="box">
-              <article class="media">
-                <div class="media-content">
-                  <div class="content">
+        <div className="columns">
+          <div className="column is-one-half">
+            <div className="box">
+              <article className="media">
+                <div className="media-content">
+                  <div className="content">
                     <h2>NHS.UK frontend</h2>
                     <p>Code you need to start building user interfaces for NHS websites and services.</p>
                   </div>
-                  <nav class="level is-mobile">
-                    <div class="level-left">
-                      <a href="https://github.com/nhsuk/nhsuk-frontend" class="level-item">
+                  <nav className="level is-mobile">
+                    <div className="level-left">
+                      <a href="https://github.com/nhsuk/nhsuk-frontend" className="level-item">
                         GitHub repository
                       </a>
                       <Link href="/releases" as={`/releases`}>
@@ -36,17 +36,17 @@ export default function Home({ allPostsData }) {
               </article>
             </div>
           </div>
-          <div class="column is-one-half">
-            <div class="box">
-              <article class="media">
-                <div class="media-content">
-                  <div class="content">
+          <div className="column is-one-half">
+            <div className="box">
+              <article className="media">
+                <div className="media-content">
+                  <div className="content">
                     <h2>NHS digital service manual</h2>
                     <p>Build consistent, accessible user interfaces. Learn from the research and experience of other NHS digital teams.</p>
                   </div>
-                  <nav class="level is-mobile">
-                    <div class="level-left">
-                      <a href="https://github.com/nhsuk/nhsuk-service-manual" class="level-item">
+                  <nav className="level is-mobile">
+                    <div className="level-left">
+                      <a href="https://github.com/nhsuk/nhsuk-service-manual" className="level-item">
                         GitHub repository
                       </a>
                       <Link href="/stats" as={`/stats`}>

@@ -3,19 +3,8 @@
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
-// Set your brand colors
-$purple: #8A4D76;
-$pink: #FA7C91;
-$brown: #757763;
-$beige-light: #D0D1CD;
-$beige-lighter: #EFF0EB;
-
 // Update Bulma's global variables
 $family-sans-serif: "Nunito", sans-serif;
-$grey-dark: $brown;
-$grey-light: $beige-light;
-$primary: $purple;
-$link: $purple;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
@@ -31,12 +20,12 @@ $input-shadow: none;
   padding-bottom: 32px;
 }
 
-.box {
-  border: 1px solid $purple;
+.navbar {
+  border-bottom: 1px solid #fff;
 }
 
-.hero-body a {
-  text-decoration: underline;
+.box {
+  border: 1px solid #000; 
 }
 
 a {
@@ -51,4 +40,8 @@ a {
 caption {
   padding: 10px;
   caption-side: bottom;
+}
+
+p {
+  color: #000;
 }
