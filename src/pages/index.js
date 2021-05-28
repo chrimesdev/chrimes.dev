@@ -1,9 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Layout, { siteTitle } from '../shared/layout'
-import { getSortedPostsData } from '../lib/posts'
 
-export default function Home({ allPostsData }) {
+export default function Home() {
   return (
     <Layout home>
       <Head>
@@ -49,7 +48,7 @@ export default function Home({ allPostsData }) {
                       <a href="https://github.com/nhsuk/nhsuk-service-manual" className="level-item">
                         GitHub repository
                       </a>
-                      <Link href="/stats" as={`/stats`}>
+                      <Link href="/stats" as={`/releases/service-manual`}>
                         <a className="level-item">
                           Telemetry
                         </a>
@@ -64,13 +63,4 @@ export default function Home({ allPostsData }) {
       </section>
     </Layout>
   )
-}
-
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
-  return {
-    props: {
-      allPostsData
-    }
-  }
 }
