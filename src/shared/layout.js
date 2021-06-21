@@ -8,7 +8,7 @@ export default function Layout({ children, home }) {
     <div>
       <Head>
         <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Chrimes.dev website" />
         <meta name="robots" content="noindex" />
@@ -16,10 +16,10 @@ export default function Layout({ children, home }) {
       </Head>
 
       <nav className="navbar has-background-black is-size-2" role="navigation" aria-label="main navigation">
-        <div class="container">
+        <div className="container">
           <div className="navbar-brand">
             <a className="navbar-item has-text-white" href="/">
-              Chrimes.
+              chrimes.dev
             </a>
 
             <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false">

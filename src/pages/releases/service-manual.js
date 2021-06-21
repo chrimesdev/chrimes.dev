@@ -28,7 +28,7 @@ export default function Releases({ repo, releases }) {
                       </thead>
                       <tbody>
                         {releases.map(({ id, name, html_url, published_at }) => (
-                        <tr key={id} class="table-content">
+                        <tr key={id} className="table-content">
                           <th scope="row"><a href={html_url}>{name}</a></th>
                           <td><Date dateString={published_at} /></td>
                         </tr>
